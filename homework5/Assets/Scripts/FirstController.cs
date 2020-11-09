@@ -32,41 +32,41 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
             }
             switch (round) {
                 case 1: {
-                        if (count >= 600) {
-                            count = 0;
-                            SendDisk(trial % 2 + 1);
-                            if(Random.Range(1,3) == 1)
-                                SendDisk(1);
-                            
-                            if (trial >= 10) {
-                                round += 1;
-                                trial = 0;
-                            }
-                            trial += 1;
+                    if (count >= 600) {
+                        count = 0;
+                        SendDisk(trial % 2 + 1);
+                        if(Random.Range(1,3) == 1)
+                            SendDisk(1);
+                        
+                        if (trial >= 10) {
+                            round += 1;
+                            trial = 0;
                         }
-                        break;
+                        trial += 1;
                     }
+                    break;
+                }
                 case 2: {
-                        if (count >= 600) {
-                            if (round == 2 && trial == 11) {
-                                running = false;
-                            }
-                            count = 0;
-                            if(trial <= 9){
-                                SendDisk(Random.Range(1,3));
-                            }
-                            if(Random.Range(1,2) == 1){
-                                SendDisk(Random.Range(1,3));
-                            }
-                            if(Random.Range(1,3) == 1){
-                                SendDisk(Random.Range(1,3));
-                            }
-                            trial += 1;
+                    if (count >= 600) {
+                        if (trial == 11) {
+                            running = false;
                         }
-                        break;
+                        count = 0;
+                        if(trial <= 9){
+                            SendDisk(Random.Range(1,3));
+                        }
+                        if(Random.Range(1,2) == 1){
+                            SendDisk(Random.Range(1,3));
+                        }
+                        if(Random.Range(1,3) == 1){
+                            SendDisk(Random.Range(1,3));
+                        }
+                        trial += 1;
                     }
+                    break;
+                }
                 default:
-                        break;
+                    break;
             } 
 
             bool ret = disk_factory.FreeUsedDisks();
