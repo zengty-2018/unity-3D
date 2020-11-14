@@ -2,6 +2,8 @@
 ## SYSU 3D Game Design 2020
 <br>
 
+博客链接：[csdn](https://blog.csdn.net/floating__dust/category_10412207.html)
+
 | HOMEWORK   |  NAME  | DATE|
 | --------   | :-----:   | :----: | 
 | hw2        | Tic-Tac-Toe  | 2020/09/23 |
